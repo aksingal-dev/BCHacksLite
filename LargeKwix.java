@@ -25,4 +25,16 @@ public class LargeKwix extends Candy {
 		Edible = true; 
 	}
 
+	@Override
+	protected void setEffects() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void setBribe() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
