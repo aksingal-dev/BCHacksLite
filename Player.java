@@ -64,12 +64,17 @@ public class Player {
 			}
 		}
 		public void eat(Candy candy) {
+			if(candy.isEdible()){
 			modifyStats(candy.getEffect());
 			candies.remove(candy);
 			if (candy.getName().equalsIgnoreCase("LargeKwix")) {
 				HalfKwix Hkwix= new HalfKwix();
 				candies.add(Hkwix);
 			}
+		else{
+			//this candy is not edible, should we print that on the console? 
+		}	
+		}
 		}
 		public void modifyStats(int[] stats) { //modify stats
 			this.setCha(getCha()+ stats[0]);
