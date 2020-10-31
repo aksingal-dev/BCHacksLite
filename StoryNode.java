@@ -1,7 +1,8 @@
+package main;
 import java.util.*;
 
 public class StoryNode {
-	private String output; 
+	private String output;
 	private StoryNode a;
 	private StoryNode b;
 	private StoryNode c;
@@ -15,16 +16,7 @@ public class StoryNode {
 	private Candy[] candiesGiven = new Candy[4];
 	private int ending = -1;
 	
-<<<<<<< Updated upstream
-	public StoryNode trigger(Player p) throws IOException {
-	//	for(int i = 0; i < 50; i++)							// clear the console
-	//		System.out.println();
-=======
 	public StoryNode trigger(Player p){
-		for(int i = 0; i < 50; i++)							// clear the console
-			System.out.println();
->>>>>>> Stashed changes
-		
 		System.out.println(this.output());
 		if(ending != -1)
 		{
@@ -105,6 +97,7 @@ public class StoryNode {
 	}
 	
 	public void setOutput(String out) { output = out; }
+	public void setCandy(Candy c, int n) { candiesGiven[n] = c; }
 	public void setA(StoryNode n) { a = n; }
 	public void setB(StoryNode n) { b = n; }
 	public void setC(StoryNode n) { c = n; }
