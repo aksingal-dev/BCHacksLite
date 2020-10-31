@@ -111,7 +111,7 @@ public class StoryNode {
 	public void setB(StoryNode n, String opt) { b = n; optB = opt;}
 	public void setC(StoryNode n, String opt) { c = n; optC = opt;}
 	public void setD(StoryNode n, String opt) { d = n; optD = opt;}
-	public void setSkillChecks(boolean[] checks) {
+	public void setSkillChecks(int[] checks) {
 		skillChecks[0] = checks[0];
 		skillChecks[1] = checks[1];
 		skillChecks[2] = checks[2];
