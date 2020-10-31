@@ -38,8 +38,8 @@ public abstract class Candy {
 		}
 
 
-		public String getEffect() {
-			return Effect;
+		public int[] getEffect() {
+			return effect;
 		}
 	
 

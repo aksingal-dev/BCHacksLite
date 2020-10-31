@@ -63,7 +63,14 @@ public class Player {
 				candies.add(candy);
 			}
 		}
-		
+		public void eat(Candy candy) {
+			modifyStats(candy.getEffect());
+			candies.remove(candy);
+			if (candy.getName().equalsIgnoreCase("LargeKwix")) {
+				HalfKwix Hkwix= new HalfKwix();
+				candies.add(Hkwix);
+			}
+		}
 		public void modifyStats(int[] stats) { //modify stats
 			this.setCha(getCha()+ stats[0]);
 			this.setDex(getDex()+ stats[1]);
