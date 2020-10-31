@@ -1,9 +1,8 @@
-package main;
 import java.util.*;
 import java.io.*;
 
 public class StoryNode {
-	private String output;
+	private String output; 
 	private StoryNode a;
 	private StoryNode b;
 	private StoryNode c;
@@ -17,8 +16,8 @@ public class StoryNode {
 	private int ending = -1;
 	
 	public StoryNode trigger(Player p) throws IOException {
-		for(int i = 0; i < 50; i++)							// clear the console
-			System.out.println();
+	//	for(int i = 0; i < 50; i++)							// clear the console
+	//		System.out.println();
 		
 		System.out.println(this.output());
 		if(ending != -1)

@@ -1,4 +1,3 @@
-package main;
 
 public class StoryTree {
 	private StoryNode root;

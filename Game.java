@@ -1,4 +1,3 @@
-package main;
 import java.io.IOException;
 import java.util.*;
 
@@ -9,7 +8,7 @@ public class Game {
 	public Game() {
 		// start game; easier to do this part here than put this as part of initializeTree().
 		
-		System.out.println("You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. It’s finally October 31st, Halloween! You’ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. It’s 5pm, so it’s time to pick out your costume and head out! But, what to be? You’ve managed to narrow it down to four options, but they’re all so good! What should you be?");
+		System.out.println("You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. Itï¿½s finally October 31st, Halloween! Youï¿½ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. Itï¿½s 5pm, so itï¿½s time to pick out your costume and head out! But, what to be? Youï¿½ve managed to narrow it down to four options, but theyï¿½re all so good! What should you be?");
 		System.out.println("a: A pumpkin\nb: A dinosaur\nc: A blue Flayola crayon\nd: A banana");
 		Scanner sc = new Scanner(System.in);
 		boolean valid;
@@ -42,9 +41,9 @@ public class Game {
 										 + "that you're looking like the best damn " + p.costume + " on the block."));
 
 		StoryNode n = tree.getRoot();
-		n.setA(new StoryNode("You walk up to the first house on the block. It’s... kind of tacky looking. \n"
+		n.setA(new StoryNode("You walk up to the first house on the block. Itï¿½s... kind of tacky looking. \n"
 						   + "For some reason it has Christmas lights up, but it also has a carved pumpkin on the \n"
-						   + "porch, as well as some fake cobwebs. At least, you think they’re fake…"),"");
+						   + "porch, as well as some fake cobwebs. At least, you think theyï¿½re fakeï¿½"),"");
 	}
 	
 	public int play() throws IOException
