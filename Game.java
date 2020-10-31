@@ -1,5 +1,4 @@
 package main;
-import java.io.IOException;
 import java.util.*;
 
 public class Game {
@@ -31,23 +30,14 @@ public class Game {
 		if(s.equals("d"))
 			p = new Player("banana");
 		
-		initializeTree();
-	}
-	
-	void initializeTree() {
-		// Do this once Ellen is done with the story!
-		
-		tree = new StoryTree(new StoryNode("Well, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
+		System.out.println("Well, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
 				                         + "You check your costume out one more time in the mirror to make sure\n"
-										 + "that you're looking like the best damn " + p.costume + " on the block."));
-
-		StoryNode n = tree.getRoot();
-		n.setA(new StoryNode("You walk up to the first house on the block. It’s... kind of tacky looking. \n"
-						   + "For some reason it has Christmas lights up, but it also has a carved pumpkin on the \n"
-						   + "porch, as well as some fake cobwebs. At least, you think they’re fake…"),"");
+										 + "that you're looking like the best damn " + p.costume + " on the block.");
+		
+		tree = new StoryTree(p);
 	}
 	
-	public int play() throws IOException
+	public int play()
 	{
 		/* Return integer based on ending:
 		 * 0 for "True" ending;
