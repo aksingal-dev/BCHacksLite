@@ -1,4 +1,4 @@
-package main;
+
 import java.util.*;
 
 public class StoryNode {
@@ -12,7 +12,7 @@ public class StoryNode {
 	private String optC;
 	private String optD;
 	
-	private boolean[] skillChecks = new boolean[4];
+	private int[] skillChecks = new int[4];		//-1 for none, 0 for cha, 1 for dex, 2 for str
 	private Candy[] candiesGiven = new Candy[4];
 	private int ending = -1;
 	
@@ -21,6 +21,11 @@ public class StoryNode {
 		if(ending != -1)
 		{
 			return new StoryNode(Integer.toString(ending));
+		}
+		if(b == null && c == null && d == null)					// straight-through node
+		{
+			p.addCandy(candiesGiven[0]);
+			return a;
 		}
 		String s = "";
 		Scanner sc = new Scanner(System.in);
