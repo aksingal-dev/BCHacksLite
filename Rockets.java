@@ -26,4 +26,18 @@ public class Rockets extends Candy{
 		Edible = true;
 	}
 
+	@Override
+	protected void setEffects() {
+		// TODO Auto-generated method stub
+		effect[0] = 0;
+		effect[1] = -1;
+		effect[2] = 1;
+	}
+
+	@Override
+	protected void setBribe() {
+		// TODO Auto-generated method stub
+		canBribe = false;
+	}
+
 }

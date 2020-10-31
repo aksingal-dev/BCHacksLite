@@ -24,4 +24,18 @@ public class AsphodelMints extends Candy {
 		Edible = true; 
 	}
 
+	@Override
+	protected void setEffects() {
+		// TODO Auto-generated method stub
+		effect[0] = 0;
+		effect[1] = 0;
+		effect[2] = 0;
+	}
+
+	@Override
+	protected void setBribe() {
+		// TODO Auto-generated method stub
+		canBribe = false;
+	}
+
 }

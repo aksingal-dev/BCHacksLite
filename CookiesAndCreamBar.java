@@ -25,4 +25,18 @@ public class CookiesAndCreamBar extends Candy{
 		Edible = true; 
 	}
 
+	@Override
+	protected void setEffects() {
+		effect[0] = 0;
+		effect[1] = 2;
+		effect[2] = 0;
+		
+	}
+
+	@Override
+	protected void setBribe() {
+		// TODO Auto-generated method stub
+		canBribe = true;
+	}
+
 }

@@ -41,12 +41,15 @@ public class Player {
 		public void addCandy(Candy candy) {
 			while((candies.size() +1) >= (getStr() + 5) ) { //if you already have the max amount you can carry
 				System.out.println("You have too many candies, choose one to eat or type skip to leave this candy ");
-				System.out.println(candies.toArray()); //print list of candies
+				for (Candy candy3 : candies) {
+					System.out.print(candy3.getName()+ " , ");
+				} //print list of candies
 				Scanner in = new Scanner(System.in); 
 				String temp = in.next(); //get name of candy to eat 
+				in.close();
 				if(!temp.equalsIgnoreCase("skip")) { 
 					for (Candy candy2 : candies) { //check for candy
-						if(candy2.getName.equalsIgnoreCase(temp)) { 
+						if(candy2.getName().equalsIgnoreCase(temp)) { 
 							candies.remove(candy2); //remove eaten from inventory 
 							break; //break for loop
 						}
