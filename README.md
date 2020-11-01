@@ -1,5 +1,5 @@
 # BCHacksLite
-Please use the main method in ChooseYourOwnCandy.java with an IDE to start the game.
+Please download all files and run the main method in ChooseYourOwnCandy.java with an IDE to start the game.
 
 We hope you like it!
 
