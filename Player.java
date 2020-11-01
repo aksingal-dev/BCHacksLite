@@ -47,12 +47,20 @@ public class Player {
 					System.out.print(candy3.getName()+ " , ");
 				} //print list of candies
 				Scanner in = new Scanner(System.in); 
-				String temp = in.next(); //get name of candy to eat 
+				String temp = in.next(); //get name of candy to eat
+				boolean fine = false;
+				for(Candy c : candies) { if(temp.equalsIgnoreCase(c.getName())) { fine = true; } }
+				while(!fine)
+				{
+					System.out.println("Sorry, I didn't understand that. Please try again.");
+					temp = in.next(); //get name of candy to eat
+					for(Candy c : candies) { if(temp.equalsIgnoreCase(c.getName())) { fine = true; } }
+				}
 				in.close();
 				if(!temp.equalsIgnoreCase("skip")) { 
 					for (Candy candy2 : candies) { //check for candy
 						if(candy2.getName().equalsIgnoreCase(temp)) { 
-							candies.remove(candy2); //remove eaten from inventory 
+							eatCandy(candy2);
 							break; //break for loop
 						}
 					}
