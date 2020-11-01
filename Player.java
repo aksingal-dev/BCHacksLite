@@ -49,17 +49,25 @@ public class Player {
 				Scanner in = new Scanner(System.in); 
 				String temp = in.next(); //get name of candy to eat
 				boolean fine = false;
-				for(Candy c : candies) { if(temp.equalsIgnoreCase(c.getName())) { fine = true; } }
+				for(Candy c : candies) { if(temp.equalsIgnoreCase(c.getName()) && c.isEdible()) { fine = true; } }
 				while(!fine)
 				{
-					System.out.println("Sorry, I didn't understand that. Please try again.");
+					boolean edible = true;
+					for(Candy c : candies) {
+						if(temp.equalsIgnoreCase(c.getName())) {
+							System.out.println("That candy is inedible!");
+							edible = false;
+						}
+					}
+					if(edible)
+						System.out.println("I'm sorry, I didn't understand that. Could you try again?");
 					temp = in.next(); //get name of candy to eat
 					for(Candy c : candies) { if(temp.equalsIgnoreCase(c.getName())) { fine = true; } }
 				}
 				in.close();
 				if(!temp.equalsIgnoreCase("skip")) { 
 					for (Candy candy2 : candies) { //check for candy
-						if(candy2.getName().equalsIgnoreCase(temp)) { 
+						if(candy2.getName().equalsIgnoreCase(temp)) {
 							eatCandy(candy2);
 							break; //break for loop
 						}
@@ -98,9 +106,6 @@ public class Player {
 		public void eatCandy(Candy c) {
 			if(c.isEdible()) {
 				modifyStats(c.getEffect());
-			}
-			else {
-				
 			}
 		}
 	
