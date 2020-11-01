@@ -10,7 +10,7 @@ public class Walnut extends Candy {
 	@Override
 	protected void SetDescription() {
 		
-		Description = "Why would you even eat this? Just throw it away";
+		Description = "How would you even eat this? Just throw it at something.";
 	}
 
 	@Override

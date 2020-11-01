@@ -3,7 +3,7 @@ public class ChocolateRaisins extends Candy {
 
 	@Override
 	protected void SetName() {
-		Name = "Chocolate Raisins"; 
+		Name = "box of Chocolate Raisins"; 
 		
 	}
 

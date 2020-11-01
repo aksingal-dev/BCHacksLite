@@ -3,7 +3,7 @@ public class BagOfPandQs extends Candy{
 
 	@Override
 	protected void SetName() {
-		Name = "Bag of P&Qs"; 
+		Name = "bag of P&Qs"; 
 		
 	}
 

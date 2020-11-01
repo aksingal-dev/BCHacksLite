@@ -3,7 +3,7 @@ public class GummyWorms extends Candy {
 
 	@Override
 	protected void SetName() {
-		Name = "GummyWorms"; 
+		Name = "package of Gummy Worms"; 
 		
 	}
 

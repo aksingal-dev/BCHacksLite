@@ -4,7 +4,7 @@ public class BagOfSquirtles extends Candy {
 	@Override
 	protected void SetName() {
 		// TODO Auto-generated method stub
-		Name = "Bag Of Squirtles"; 
+		Name = "bag Of Squirtles"; 
 		
 	}
 

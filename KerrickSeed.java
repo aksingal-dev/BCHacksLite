@@ -4,7 +4,7 @@ public class KerrickSeed extends Candy  {
 	@Override
 	protected void SetName() {
 		// TODO Auto-generated method stub
-		Name = "KerrickSeed"; 
+		Name = "Kerrick Seed"; 
 	}
 
 	@Override
