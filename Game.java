@@ -61,4 +61,6 @@ public class Game {
 		}
 		return -1;
 	}
+	
+	public Player getPlayer() { return p; }
 }
