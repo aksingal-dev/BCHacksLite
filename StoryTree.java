@@ -85,6 +85,7 @@ public class StoryTree {
 								   + "not in an \"I'm-going-to-eat-you\" sort of way. You calm down and smile\n"
 								   + "sheepishly at him as he continues:\n"
 								   + "Well, what kind of candy would you like?");
+		n7.setNext(n8);
 		n8.setA(null, "Gummy worms!");
 		n8.setB(null, "Rockets!");
 		n8.setC(null, "P and Q's!");

@@ -9,7 +9,12 @@ public class Game {
 	public Game() {
 		// start game; easier to do this part here than put this as part of initializeTree().
 		
-		System.out.println("You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. It’s finally October 31st, Halloween! You’ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. It’s 5pm, so it’s time to pick out your costume and head out! But, what to be? You’ve managed to narrow it down to four options, but they’re all so good! What should you be?");
+		System.out.println("You yawn as you stretch, and having woken up from your nap just as\n"
+						 + "your alarm starts to go off. It’s finally October 31st - Halloween!\n"
+						 + "You’ve been waiting for this day since... well, since last Halloween.\n"
+						 + "This year is sure to be the best. It’s 5pm, so it’s time to pick out your\n"
+						 + "costume and head out! But, what to be? You’ve managed to narrow it down to four options,\n"
+						 + "but they’re all so good! What should you be?");
 		System.out.println("a: A pumpkin\nb: A dinosaur\nc: A blue Flayola crayon\nd: A banana");
 		Scanner sc = new Scanner(System.in);
 		boolean valid;
@@ -46,7 +51,13 @@ public class Game {
 		{
 			if(node.output().equals("0") || node.output().equals("1") || node.output().equals("2") || node.output().equals("3"))
 				return Integer.parseInt(node.output());
-			node = node.trigger(p);
+			if(node instanceof Skillcheck)
+			{
+				Skillcheck sc = (Skillcheck) node;
+				node = sc.execute();
+			}
+			else
+				node = node.trigger(p);
 		}
 		return -1;
 	}
