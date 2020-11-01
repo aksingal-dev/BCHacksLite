@@ -25,15 +25,14 @@ public class ChooseYourOwnCandy {
 		sc.nextLine();
 		System.out.println("|----|----|\n");
 		Game g = new Game();
+		Player p = g.getPlayer();
 		int ending = g.play();
 		if(ending == 3)
 			g = new Game();
 		else
 		{
-			for(int i = 0; i < 50; i++)
+			for(int i = 0; i < 100; i++)
 				System.out.println();
-			if(ending == 0) { System.out.print("TRUE END"); }
-			if(ending == 1) { System.out.print("LAME END"); }
 			if(ending == 2) {
 				System.out.println("You unwrap the mint and pop it into your mouth. Almost as soon as it\n"
 							   	 + "begins to dissolve, you start feeling woozy and your vision blurs.\n"
@@ -41,6 +40,18 @@ public class ChooseYourOwnCandy {
 							   	 + "your head, but barely lasts a second before your vision goes bla\n"
 							   	 + "Exception in thread \"main\" java.lang.NullPointerException\n"
 							   	 + "        at Halloween.main(Halloween.java:12)\n\n\n\n"); }
+			else
+			{
+				if(ending == 0) { System.out.println("TRUE END"); }
+				if(ending == 1) { System.out.println("LAME END"); }
+				System.out.println("\n\n\n\n\nThanks for playing Choose Your Own Candy!");
+				System.out.print("\n\n\n\n\nYour Final Score: ");
+				int score = 0;
+				for(Candy c : p.candies)
+					score += c.getPoints();
+				System.out.println(score);
+				System.out.println("\n\n\n\n\nHave a happy Halloween!");
+			}
 		}
 	}
 }

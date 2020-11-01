@@ -209,7 +209,25 @@ public class StoryTree {
 		n19.setA(n20);
 		n19.setB(n23);
 		
-		StoryNode n24 = new StoryNode("");
+		StoryNode n24 = new StoryNode("Walking toward the next house, you smile as you pass by a pumpkin carved to look\n"
+									+ "like a cat. When you turn away from it, you're practically at the gate.\n"
+									+ "You walk past little pumpkin decorations hanging from tree branches, and a little\n"
+									+ "skeleton decoration on the door. When you reach the door, you see that she's a bit\n"
+									+ "sweaty, and she explains that she took so long putting up the decorations that\n"
+									+ "she didn't even have time to get her costume on. She compliments yours, though,\n"
+									+ "and slips a stick of Rockets into your sack.\n"
+									+ "By now, you're getting a little bit tired, so you make your way back home.");
+		n24.setCandy(new Rockets());
+		n21.setNext(n24);
+		n22.setNext(n24);
+		n23.setNext(n24);
+		
+		StoryNode n25 = new StoryNode("Stepping in the door of your house causes a wave of fatigue to set in. You've\n"
+									+ "been out for a while, and the warmth of the heating makes you want to pack it in\n"
+									+ "for the night. It was a good night, and you got a lot of candy - you'll probably\n"
+									+ "have a stomach ache tomorrow. For now, though, you put your costume back on its\n"
+									+ "hanger, put on your pajamas, and crawl into bed.\n\n"
+									+ "This was a good Halloween.");
 		
 		
 		// END OF LAME ENDING ROUTE
