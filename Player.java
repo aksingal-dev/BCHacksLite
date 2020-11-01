@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,6 +63,7 @@ public class Player {
 			}
 			if( !( (candies.size() +1) >= (getStr() + 5) ) ){ //add the candy
 				candies.add(candy);
+				System.out.println("You got a " + candy.getName() + "!\n" + candy.getDescription());
 			}
 		}
 		

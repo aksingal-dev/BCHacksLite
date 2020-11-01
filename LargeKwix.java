@@ -28,13 +28,16 @@ public class LargeKwix extends Candy {
 	@Override
 	protected void setEffects() {
 		// TODO Auto-generated method stub
-		
+		effect[0] = 0;
+		effect[1] = 0;
+		effect[2] = 1;
+
 	}
 
 	@Override
 	protected void setBribe() {
 		// TODO Auto-generated method stub
-		
+		canBribe = true;
 	}
 
 }
