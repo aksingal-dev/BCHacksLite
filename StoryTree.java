@@ -175,6 +175,7 @@ public class StoryTree {
 									+ "desperately trying to evate it by reaching the next house over. While you're running, a");
 		StoryNode bugfix18 = new StoryNode(" falls out of your pillowcase, and the mummy\n"
 										 + "stops to pick it up. You accept the loss, and keep running to the next house.\n\n");
+		n16.setNext(n18);
 		add17c.setNext(n18);
 		n18.setNext(bugfix18);
 		
@@ -328,7 +329,8 @@ public class StoryTree {
 									+ "But your thoughts drift to the group of nerds behind you: how scared will they be\n"
 									+ "on their way out? Do you even want to stick around and see, or just head home\n"
 									+ "and get to sleep?\n\n");
-		
+		yeet.setNext(n31);
+		run.setNext(n31);
 		n31.setA(null, "I wouldn't miss their reaction for the world!");
 		n31.setB(null, "I really ought to get to sleep...");
 		

@@ -21,6 +21,12 @@ public class StoryNode {
 	public StoryNode trigger(Player p){
 		if(this.output().contains("startled by a mummy"))
 			this.setOutput(this.output() + p.dropCandy());
+		if(this.output().contains("footfalls"))
+		{
+			for(Candy c : p.candies)
+				if(c instanceof Walnut)
+					p.candies.remove(c);
+		}
 		if(!this.output().equals(""))
 			System.out.println("\n----------\n");
 		System.out.println(this.output()+"\n");
