@@ -163,19 +163,22 @@ public class StoryTree {
 									+ "should get some too.\n");
 		StoryNode n17 = new StoryNode("\"Might as well take it all,\" you think, before shoveling the entire bowl\n"
 									+ "into your pillowcase.\n");
-		p.addCandy(new BagOfPandQs());
-		p.addCandy(new ChocolateRaisins());
-		p.addCandy(new Rockets());
+		StoryNode add17a = new StoryNode("");
+		StoryNode add17b = new StoryNode("");
+		StoryNode add17c = new StoryNode("");
 		n15.setA(n16);
 		n15.setB(n17);
+		n17.setNext(add17a);
+		add17a.setNext(add17b);
+		add17b.setNext(add17c);
 		
 		StoryNode n18 = new StoryNode("Turning to continue down the street, you're startled by a mummy jumping\n"
 									+ "out at you from a bush! It starts to chase you, and you break into a sprint,\n"
-									+ "desperately trying to evate it by reaching the next house over.\n"
-									+ "While you're running, a " + p.dropCandy().getName() + " falls out of your\n"
-									+ "pillowcase, and the mummy stops to pick it up. You accept the loss, and\n"
-									+ "keep running to the next house.");
-		n17.setNext(n18);
+									+ "desperately trying to evate it by reaching the next house over. While you're running, a");
+		StoryNode bugfix18 = new StoryNode(" falls out of your pillowcase, and the mummy\n"
+										 + "stops to pick it up. You accept the loss, and keep running to the next house.");
+		add17c.setNext(n18);
+		n18.setNext(bugfix18);
 		
 		StoryNode n19 = new StoryNode("The next house has a nice middle-aged couple, who watch you running up the path before\n"
 									+ "falling to your hands and knees on their stairs. The man kneels down and helps you up.\n\n"
@@ -188,6 +191,28 @@ public class StoryTree {
 		n18.setNext(n19);
 		n19.setA(null, "Give it the old colledge try!");
 		n19.setB(null, "I'm too tired...");
+		
+		StoryNode n20;		// skill check; init after results
+		StoryNode n21 = new StoryNode("Your heart pounds in your ears as you line up and wait for the whistle. The moment\n"
+									+ "the man tweets, you're off at breakneck pace, speeding ahead of the woman easily.\n"
+									+ "You reach the finish a full second before her, and fall down again, huffing and puffing.\n"
+									+ "\"Nicely done,\" she says. \"You've earned this.\" The husband tosses the\n"
+									+ "cookies-and-cream bar into your pillowcase, and you clamber to your feet gladly.\n\n");
+		StoryNode n22 = new StoryNode("As you're lining up, you can already tell your costume is going to be cumbersome;\n"
+									+ "but when you start running, it's so much worse than you could have imagined, and you go\n"
+									+ "ass-over-teakettle as she breaks ahead of you.\n\n"
+									+ "");
+		StoryNode n23 = new StoryNode("You smile shakily up at her, but shake your head. \"Too tired,\" you say. The lady sighs\n"
+									+ "disappointedly, but smiles back at you. \"Alright then,\" she says in a friendly tone.\n"
+									+ "\"Take care of yourself!\"\n\n");
+		
+		n20 = new Skillcheck("A smile creeps over your face, and you nod, thinking that you could easily beat the woman and\n"
+				   + "get your hand on another large candy bar.", p, 1, n21, n22, 13);
+		n19.setA(n20);
+		n19.setB(n23);
+		
+		StoryNode n24 = new StoryNode("");
+		
 		
 		// END OF LAME ENDING ROUTE
 		
