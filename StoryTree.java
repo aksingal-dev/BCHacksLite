@@ -98,5 +98,38 @@ public class StoryTree {
 		n8.setB(n9);
 		n8.setC(n9);
 		
+		StoryNode n10 = new StoryNode("The next house has no decorations outside - no pumpkins, not even a\n"
+									+ "sheet hung up to look like a ghost. But the lights are on, so you decide\n"
+									+ "to go knock anyway.\n\n"
+									+ "A greasy man comes to the door; he's unshaven, and smells as though he hasn't\n"
+									+ "showered in a week. Disgostang! He looks at you with an unsettling light\n"
+									+ "in his eye, and doesn't react to your shaky \"Trick or treat?\"\n"
+									+ "A few moments later, as you're about to turn to leave, he reaches beside the\n"
+									+ "door to grab a couple of mints, which he tosses into your pillowcase lazily.\n"
+									+ "Asphodel Mints,\" he mutters under his breath, before staggering back inside\n"
+									+ "and slamming the door behind him.\n\n"
+									+ "Somewhat shaken, you turn around and nearly sprint back down the path,\n"
+									+ "eager to get back on the road.\n\n");
+		n9.setNext(n10);
+		n10.setCandy(new AsphodelMints(), 0);
+		
+		StoryNode n11 = new StoryNode("However, just as you get to the road, your stomach rumbles; the night\n"
+									+ "has already been more exhausting than expected. You wanted to save\n"
+									+ "your candy for when you get home... but maybe you could eat those mints?\n"
+									+ "You don't think your mom would be happy to see you with them anyway...\n\n");
+		n11.setA(null, "Eat the mints... what's the worst that could happen?");
+		n11.setB(null, "Deal with it for a while.");
+		
+		StoryNode mintEnd = new StoryNode("2");
+		StoryNode n12 = new StoryNode("You decide that it's probably best not to chance it, and place\n"
+									+ "the mints back into your pillowcase. You'll get through it just fine.\n\n");
+		
+		
+		n11.setA(mintEnd);
+		n11.setB(n12);
+		
+		StoryNode n13 = new StoryNode("As you're walking down the street, your eyes are stabbed by a flash of\n"
+									+ "neon light.");
+		n12.setNext(n13);
 	}
 }
