@@ -134,7 +134,7 @@ public class StoryTree {
 									+ "neon light. You look up and see a massive house, more of a mansion, at\n"
 									+ "the end of the road, dressed up like a haunted house. It looks awesome;\n"
 									+ "but almost a little TOO real, with kids running out from the back screaming.\n"
-									+ "Still... it would be a shame to miss out on it...");
+									+ "Still... it would be a shame to miss out on it...\n\n");
 		n12.setNext(n13);
 		n13.setA(null, "Brave the haunted house! In the name of good fun!");
 		n13.setB(null, "Maybe next year?");
@@ -147,20 +147,20 @@ public class StoryTree {
 									+ "Eventually, you decide that the haunted house is a bit more than you're ready\n"
 									+ "for, this year. So, with a heavy heart, you turn around, thinking you'll hit\n"
 									+ "a few more houses on the way back home and inflate the candy Wall Street a little\n"
-									+ "more.");
+									+ "more.\n\n");
 		n13.setB(n14);
 		
 		StoryNode n15 = new StoryNode("On your way back, you pass by a house without any lights on. However, they have a\n"
 									+ "bowl with a \"TAKE ONE\" sign attached; the bowl still has a few pieces of candy!\n"
-									+ "You could probably take a few, if you wanted...");
+									+ "You could probably take a few, if you wanted...\n\n");
 		n14.setNext(n15);
 		n15.setA(null, "Leave some for everyone else");
 		n15.setB(null, "MINE! MINE! ALLLLLLLL MINE!");
 		
 		StoryNode n16 = new StoryNode("You decide to be courteous, and only take one bag of P&Qs... Everybody else\n"
-									+ "should get some too.\n");
+									+ "should get some too.\n\n");
 		StoryNode n17 = new StoryNode("\"Might as well take it all,\" you think, before shoveling the entire bowl\n"
-									+ "into your pillowcase.\n");
+									+ "into your pillowcase.\n\n");
 		StoryNode add17a = new StoryNode("");
 		StoryNode add17b = new StoryNode("");
 		StoryNode add17c = new StoryNode("");
@@ -174,7 +174,7 @@ public class StoryTree {
 									+ "out at you from a bush! It starts to chase you, and you break into a sprint,\n"
 									+ "desperately trying to evate it by reaching the next house over. While you're running, a");
 		StoryNode bugfix18 = new StoryNode(" falls out of your pillowcase, and the mummy\n"
-										 + "stops to pick it up. You accept the loss, and keep running to the next house.");
+										 + "stops to pick it up. You accept the loss, and keep running to the next house.\n\n");
 		add17c.setNext(n18);
 		n18.setNext(bugfix18);
 		
@@ -185,7 +185,7 @@ public class StoryTree {
 									+ "gestures to his wife, who steps forward with two large candy bars in her hands.\n\n"
 									+ "\"Tell you what,\" she says, \"I'll give you this one for free.\" She slips the bar,"
 									+ "a large Kwix, into your pillowcase. \" And if you can beat me in a race for this one,\""
-									+ "you can have it too.\" While speaking, she waggles a cookies-and-cream bar in her other hand.\n");
+									+ "you can have it too.\" While speaking, she waggles a cookies-and-cream bar in her other hand.\n\n");
 		n18.setNext(n19);
 		n19.setA(null, "Give it the old colledge try!");
 		n19.setB(null, "I'm too tired...");
@@ -216,7 +216,7 @@ public class StoryTree {
 									+ "sweaty, and she explains that she took so long putting up the decorations that\n"
 									+ "she didn't even have time to get her costume on. She compliments yours, though,\n"
 									+ "and slips a stick of Rockets into your sack.\n"
-									+ "By now, you're getting a little bit tired, so you make your way back home.");
+									+ "By now, you're getting a little bit tired, so you make your way back home.\n\n");
 		n24.setCandy(new Rockets());
 		n21.setNext(n24);
 		n22.setNext(n24);
@@ -227,15 +227,147 @@ public class StoryTree {
 									+ "for the night. It was a good night, and you got a lot of candy - you'll probably\n"
 									+ "have a stomach ache tomorrow. For now, though, you put your costume back on its\n"
 									+ "hanger, put on your pajamas, and crawl into bed.\n\n"
-									+ "This was a good Halloween.");
+									+ "This was a good Halloween. But maybe, you think, the haunted house could have\n"
+									+ "made it just that little bit better...\n\n");
+		n24.setNext(n25);
+		
+		StoryNode lameEnd = new StoryNode("1");
+		n25.setNext(lameEnd);
 		
 		
 		// END OF LAME ENDING ROUTE
 		
 		// ENTER THE HAUNTED HOUSE
 		
+		StoryNode n26 = new StoryNode("You need to beat down a \"YOLO\" (what is this, 2013?) before getting in line\n"
+									+ "to enter the haunted house. A group of four nerdy-looking teenagers wearing\n"
+									+ "costumes you don't recognize gather in behind you, muttering among themselves\n"
+									+ "about how the house was 'scarier than Phantasma,' and how they 'didn't even want\n"
+									+ "to leave their houses after that one.' You... admittedly have no idea what\n"
+									+ "Phantasma is, but decide it's better not to ask.\n\n"
+									+ "Finally, it's your turn to go in! A man standing at the front door hands you\n"
+									+ "a walnut.\n"
+									+ "...What is this? Some kind of Halloween 'treat?' More like a trick...\n\n");
+		
+		n13.setA(n26);
+		n13.setCandy(new Walnut(), 0);
+		
+		StoryNode n27 = new StoryNode("Walking through the house, you're surprised to see that it isn't the bog-standard,\n"
+									+ "kitschy-horror haunted house you're used to - it's impressive how the family\n"
+									+ "had pulled it off. Actors reach out to grab you around every corner, and there's\n"
+									+ "fake (hopefully) blood everywhere, with mannequin bodies piled up nearby.\n"
+									+ "There are even shackles hanging down from the ceiling, a neat little detail\n"
+									+ "However, as you're walking down a hall, a door creaks open on your left, and a trail\n"
+									+ "of mist seeps out and curls up, almost mimicking a come-hither motion. It piques\n"
+									+ "your curiosity, and you consider turning off what you think is the intended path.\n\n");
+		
+		n26.setNext(n27);
+		n27.setA(null, "Walk through the door");
+		n27.setB(null, "Continue down the hallway");
+		
 		// LOOP ENDING: https://i.redd.it/hj4dr1lonal31.png
+		StoryNode n28 = new StoryNode("As you step through the door, you see that you're standing in a vast room, with\n"
+									+ "nobody else to be seen; it must be the wrong path. But when you turn around to\n"
+									+ "go back into the hall, you can't see the door. You can't see anything, actually -\n"
+									+ "the fog has obscured your sight. You fumble at the wall, looking for an opening,\n"
+									+ "but find nothing; so, with no other option, you shuffle along with your shoulder\n"
+									+ "against the wall, hoping you just missed the door.\n\n");
+		n27.setA(n28);
+		
+		StoryNode n29 = new StoryNode("As you walk along the wall, the smoke thickens even further until you can\n"
+									+ "barely see your own hands when you wave them in front of your face.\n"
+									+ "Colours start appearing as though there were concert floodlights -\n"
+									+ "coming from overhead, in front of you, and somehow a bright green light from\n"
+									+ "BELOW you? And it feels as though you've walked further than the mansion was wide...\n"
+									+ "Just as you're telling yourself that it's impossible, and the house must be\n"
+									+ "just as rational as everything else, your foot slides off into a void and you fall\n"
+									+ "forward, flipping to fall back-first down a pit.\n"
+									+ "You must scream.\n"
+									+ "But you can't scream. Why can't I scream? He has no mouth. But he has feet,\n"
+									+ "why can't his feet scream? Why can't the lights scream? The lights that are falling\n"
+									+ "with me, following you down, the green light blasting up past our back -\n\n");
+		n28.setNext(n29);
+		
+		StoryNode loopEnd = new StoryNode("3");
+		
+		n29.setNext(loopEnd);
+		
+		// END OF LOOP ENDING
 		
 		// TRUE ENDING
+		
+		StoryNode n30 = new StoryNode("You decide against it, guessing that the path would be more clearly marked. And\n"
+									+ "as you continue down the hallway, you see an arrow marker on the wall pointing\n"
+									+ "in the direction you're walking, and you sigh in relief.\n\n"
+									+ "As you get near what you think is the exit door, you see a mannequin in an old-school,\n"
+									+ "Jacob Woolbees-style hockey mask and holding a whirring chainsaw! As you shuffle\n"
+									+ "toward it, you start thinking that it looks a little too real; just as you decide\n"
+									+ "that it's probably not, the mannequin steps off of its pedestal and revs the chainsaw,\n"
+									+ "turning to face you!\n\n"
+									+ "You bolt away from the mannequin, hearing him lumbering after you, and desperately\n"
+									+ "reach into your sack for anything that could fend him off for even a minute. But the\n"
+									+ "only thing your hand closes on is the walnut from earlier! Could this even help at all?\n\n");
+		n27.setB(n30);
+		
+		// yeet one (1) walnut
+		StoryNode yeet = new StoryNode("It's not as though the walnut can do any harm; so you pull it out of the sack and\n"
+									+ "throw it back toward the mannequin. Surprisingly, it shatters on the ground, and\n"
+									+ "releases a cloud of smoke between you and the mannequin! You can hear his footfalls\n"
+									+ "stop, and you manage to reach a door labelled 'EXIT.'\n\n");
+		
+		StoryNode run = new StoryNode("Deciding it would probably just anger the madman, you drop the walnut and push yourself\n"
+									+ "to run even faster. Within seconds, you're screeching to a halt at a door labelled 'EXIT.'\n\n");
+		
+		n30.setA(yeet, "Throw the walnut!");
+		n30.setB(run, "Just try to get away");
+		
+		StoryNode n31 = new StoryNode("Gratefully, you slam yourself against the door, falling onto the grass outside\n"
+									+ "and hyperventilating.\n\n"
+									+ "That was close.\n\n"
+									+ "Maybe too close.\n\n"
+									+ "But your thoughts drift to the group of nerds behind you: how scared will they be\n"
+									+ "on their way out? Do you even want to stick around and see, or just head home\n"
+									+ "and get to sleep?\n\n");
+		
+		n31.setA(null, "I wouldn't miss their reaction for the world!");
+		n31.setB(null, "I really ought to get to sleep...");
+		
+		StoryNode seed = new StoryNode("With a sardonic smile on your face, you drag yourself away from the door\n"
+									 + "to rest agaist the wall, watching the exit.\n\n"
+									 + "Five minutes later, the four nerds burst through the exit, shrieking as the\n"
+									 + "sound of the chainsaw buzzes behind them. As the last one slips through the door,\n"
+									 + "his pillowcase tears slightly and a small, vaguely-round object drops out.\n"
+									 + "He doesn't seem to notice, though, as he's already twenty feet away and\n"
+									 + "rushing toward the street like a linebacker.\n\n"
+									 + "You stand up and walk over to where the object seemed like it fell, and\n"
+									 + "stumble over it under your feet; you pick it up, and realize it's shaped like a\n"
+									 + "Wershey's hug, and extraordinarily heavy: the thing must be made out of solid metal!\n"
+									 + "Even though it smells like a cow paddy, you pocket it quickly, and as\n"
+									 + "you do, the words 'Yahaha!' echo in the wind...\n\n");
+		n31.setCandy(new KerrickSeed(), 0);
+		n31.setA(seed);
+		
+		StoryNode homeSeed = new StoryNode("You wander home through noisy streets, locking the door when you entered\n"
+										 + "and climbing upstairs to your room. With a sigh of exhaustion, you dump your\n"
+										 + "sack into a plastic bucket, spilling a bit of candy due to the sheer volume of\n"
+										 + "the lump you retrieved.\n\n"
+										 + "Questions, questions, questions.\n\n"
+										 + "But you can leave those for tomorrow. Tonight, you just want to get to sleep.\n\n");
+		
+		StoryNode homeQuick = new StoryNode("You wander home through noisy streets, locking the door when you entered\n"
+				 						  + "and climbing upstairs to your room. With a sigh of exhaustion, you dump your\n"
+				 						  + "sack into a plastic bucket, a bit of candy overflowing onto the floor.\n"
+				 						  + "But you figure you may as well clean that up in the morning; tonight, you just\n"
+				 						  + "want to get to sleep.\n\n");
+		
+		n31.setB(homeQuick);
+		seed.setNext(homeSeed);
+				 
+		StoryNode end = new StoryNode("You glance out the window and see the wind beginning to pick up; with that, you\n"
+										 + "put your costume back on its hanger, put on your pajamas, and crawl into bed.\n"
+										 + "All things considered... This was a damn good Halloween.\n\n");
+		homeSeed.setNext(end);
+		homeQuick.setNext(end);
+		end.setNext(new StoryNode("0"));
 	}
 }
