@@ -5,6 +5,7 @@ public class Game {
 	private StoryTree tree;
 	private Player p;
 	
+	@SuppressWarnings("resource")
 	public Game() {
 		// start game; easier to do this part here than put this as part of initializeTree().
 		
@@ -19,7 +20,6 @@ public class Game {
 			if(!valid)
 				System.out.println("I'm sorry, I didn't understand that.");
 		} while(!valid);
-		sc.close();
 		
 		if(s.equals("a"));
 			p = new Player("pumpkin");
@@ -29,10 +29,6 @@ public class Game {
 			p = new Player("blue Flayola crayon");
 		if(s.equals("d"))
 			p = new Player("banana");
-		
-		System.out.println("\nWell, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
-				                         + "You check your costume out one more time in the mirror to make sure\n"
-										 + "that you're looking like the best damn " + p.costume + " on the block.");
 		
 		tree = new StoryTree(p);
 	}

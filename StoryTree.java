@@ -60,8 +60,8 @@ public class StoryTree {
 		StoryNode n5 = new StoryNode("Ehh... why bother? You got plenty as is.\n");
 		n2 = new Skillcheck("You attempt to flatter the witch!",p,0,n3,n4,10);
 		
-		nOops.setA(n2);
-		nOops.setB(n5);
+		nOops.setA(n2, "Go for flattery!");
+		nOops.setB(n5, "Go about your night");
 		
 		StoryNode n6 = new StoryNode("The witch wishes you a spooky evening, before mist appears from nowhere to obscure\n"
 								   + "her body. By the time the mist clears, she has disappeared, and the door creaks shut.\n"

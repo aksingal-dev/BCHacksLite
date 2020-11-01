@@ -16,10 +16,11 @@ public class StoryNode {
 	private Candy[] candiesGiven = {null, null, null, null};
 	private int ending = -1;
 	
+	@SuppressWarnings("resource")
 	public StoryNode trigger(Player p){
 		if(this.output().contains("startled by a mummy"))
 			this.setOutput(this.output() + p.dropCandy());
-		
+		System.out.println("\n----------\n");
 		System.out.println(this.output());
 		if(ending != -1)
 		{
@@ -33,6 +34,7 @@ public class StoryNode {
 		}
 		String s = "";
 		boolean valid;
+		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println("a: " + optA);
 			System.out.println("b: " + optB);
@@ -42,9 +44,9 @@ public class StoryNode {
 				if(d != null)
 					System.out.println("d: " + optD);
 			}
-			Scanner sc = new Scanner(System.in);
+			
 			s = sc.next();
-			sc.close();
+			
 			valid = !((!s.equals("a") && !s.equals("b") && !s.equals("c") && !s.equals("d")) ||
 					  (s.equals("c") && c == null) ||
 					  (s.equals("d") && d == null));
