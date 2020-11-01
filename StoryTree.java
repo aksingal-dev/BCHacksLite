@@ -90,7 +90,7 @@ public class StoryTree {
 		n8.setC(null, "P and Q's!");
 		n8.setCandy(new GummyWorms(), 0);
 		n8.setCandy(new Rockets(), 1);
-		n8.setCandy(new BagOfPandQs(), 2);
+		n8.setCandy(new CandyCorn(), 2);
 		
 		StoryNode n9 = new StoryNode("The werewolf laughs heartily, startling you. \"Those are my favorites too!\"\n"
 								   + "He tosses the candy into your pillowcase, and waves at you as you walk away.\n");
@@ -98,6 +98,7 @@ public class StoryTree {
 		n8.setB(n9);
 		n8.setC(n9);
 		
+		// ASPHODEL MINTS
 		StoryNode n10 = new StoryNode("The next house has no decorations outside - no pumpkins, not even a\n"
 									+ "sheet hung up to look like a ghost. But the lights are on, so you decide\n"
 									+ "to go knock anyway.\n\n"
@@ -124,12 +125,76 @@ public class StoryTree {
 		StoryNode n12 = new StoryNode("You decide that it's probably best not to chance it, and place\n"
 									+ "the mints back into your pillowcase. You'll get through it just fine.\n\n");
 		
-		
 		n11.setA(mintEnd);
 		n11.setB(n12);
 		
+		// END OF ASPHODEL MINTS
+		
+		// HAUNTED HOUSE
+		
 		StoryNode n13 = new StoryNode("As you're walking down the street, your eyes are stabbed by a flash of\n"
-									+ "neon light.");
+									+ "neon light. You look up and see a massive house, more of a mansion, at\n"
+									+ "the end of the road, dressed up like a haunted house. It looks awesome;\n"
+									+ "but almost a little TOO real, with kids running out from the back screaming.\n"
+									+ "Still... it would be a shame to miss out on it...");
 		n12.setNext(n13);
+		n13.setA(null, "Brave the haunted house! In the name of good fun!");
+		n13.setB(null, "Maybe next year?");
+		
+		// SKIP THE HAUNTED HOUSE - LAME ENDING ROUTE
+		
+		StoryNode n14 = new StoryNode("You look into your pillowcase and see that your candy pickings are a bit thin...\n"
+									+ "You stare down at the haunted house, pondering whether your haul would be\n"
+									+ "disappointing to 8-year-old you.\n"
+									+ "Eventually, you decide that the haunted house is a bit more than you're ready\n"
+									+ "for, this year. So, with a heavy heart, you turn around, thinking you'll hit\n"
+									+ "a few more houses on the way back home and inflate the candy Wall Street a little\n"
+									+ "more.");
+		n13.setB(n14);
+		
+		StoryNode n15 = new StoryNode("On your way back, you pass by a house without any lights on. However, they have a\n"
+									+ "bowl with a \"TAKE ONE\" sign attached; the bowl still has a few pieces of candy!\n"
+									+ "You could probably take a few, if you wanted...");
+		n14.setNext(n15);
+		n15.setA(null, "Leave some for everyone else");
+		n15.setB(null, "MINE! MINE! ALLLLLLLL MINE!");
+		
+		StoryNode n16 = new StoryNode("You decide to be courteous, and only take one bag of P&Qs... Everybody else\n"
+									+ "should get some too.\n");
+		StoryNode n17 = new StoryNode("\"Might as well take it all,\" you think, before shoveling the entire bowl\n"
+									+ "into your pillowcase.\n");
+		p.addCandy(new BagOfPandQs());
+		p.addCandy(new ChocolateRaisins());
+		p.addCandy(new Rockets());
+		n15.setA(n16);
+		n15.setB(n17);
+		
+		StoryNode n18 = new StoryNode("Turning to continue down the street, you're startled by a mummy jumping\n"
+									+ "out at you from a bush! It starts to chase you, and you break into a sprint,\n"
+									+ "desperately trying to evate it by reaching the next house over.\n"
+									+ "While you're running, a " + p.dropCandy().getName() + " falls out of your\n"
+									+ "pillowcase, and the mummy stops to pick it up. You accept the loss, and\n"
+									+ "keep running to the next house.");
+		n17.setNext(n18);
+		
+		StoryNode n19 = new StoryNode("The next house has a nice middle-aged couple, who watch you running up the path before\n"
+									+ "falling to your hands and knees on their stairs. The man kneels down and helps you up.\n\n"
+									+ "\"Are you alright?\" he asks, a note of worry in his voice.\n\n"
+									+ "\"Trick... or... treat?\" you reply, out of breath. The man smiles slightly, and\n"
+									+ "gestures to his wife, who steps forward with two large candy bars in her hands.\n\n"
+									+ "\"Tell you what,\" she says, \"I'll give you this one for free.\" She slips the bar,"
+									+ "a large Kwix, into your pillowcase. \" And if you can beat me in a race for this one,\""
+									+ "you can have it too.\" While speaking, she waggles a cookies-and-cream bar in her other hand.\n");
+		n18.setNext(n19);
+		n19.setA(null, "Give it the old colledge try!");
+		n19.setB(null, "I'm too tired...");
+		
+		// END OF LAME ENDING ROUTE
+		
+		// ENTER THE HAUNTED HOUSE
+		
+		// LOOP ENDING: https://i.redd.it/hj4dr1lonal31.png
+		
+		// TRUE ENDING
 	}
 }
