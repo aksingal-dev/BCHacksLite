@@ -30,7 +30,7 @@ public class Game {
 		if(s.equals("d"))
 			p = new Player("banana");
 		
-		System.out.println("Well, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
+		System.out.println("\nWell, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
 				                         + "You check your costume out one more time in the mirror to make sure\n"
 										 + "that you're looking like the best damn " + p.costume + " on the block.");
 		
@@ -45,13 +45,12 @@ public class Game {
 		 * 2 for "Mint" / "Null" ending;
 		 * 3 for "Loop" ending.
 		 */
-		Scanner sc = new Scanner(System.in);
 		StoryNode node = tree.getRoot();
 		while(node != null)
 		{
 			if(node.output().equals("0") || node.output().equals("1") || node.output().equals("2") || node.output().equals("3"))
 				return Integer.parseInt(node.output());
-			node = node.trigger(p, sc);
+			node = node.trigger(p);
 		}
 		return -1;
 	}
