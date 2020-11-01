@@ -25,7 +25,11 @@ public class StoryNode {
 		{
 			for(Candy c : p.candies)
 				if(c instanceof Walnut)
+				{
 					p.candies.remove(c);
+					break;
+				}
+			
 		}
 		if(!this.output().equals(""))
 			System.out.println("\n----------\n");
