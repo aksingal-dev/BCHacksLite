@@ -67,6 +67,19 @@ public class Player {
 			}
 		}
 		
+		public Candy dropCandy()
+		{
+			for(Candy c : candies)
+			{
+				if(c.getPoints() == 500)
+				{
+					return candies.remove(candies.indexOf(c));
+					
+				}
+			}
+			return candies.remove(0);
+		}
+		
 		public void modifyStats(int[] stats) { //modify stats
 			this.setCha(getCha()+ stats[0]);
 			this.setDex(getDex()+ stats[1]);
