@@ -65,7 +65,7 @@ public class StoryNode implements ActionListener
       next.setForeground(Color.green);
       next.setFont(mono);
       
-      if (next.getText() == p1)
+      if (story.getText() == p1)
       {
          next.setVisible(false);
       }
@@ -127,9 +127,10 @@ public class StoryNode implements ActionListener
       
       if (eventName.equals(next) || eventName.equals(option1) || eventName.equals(option2) || eventName.equals(option3) || eventName.equals(option4))
       {
-         if (story.equals(p1))
+         if (story.getText() == p1)
          {
-            story.setText(p2);
+            story.equals(p2);
+            story.getText();
          }
          else 
          {
