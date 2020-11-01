@@ -23,7 +23,7 @@ public class ChooseYourOwnCandy {
 						 + "penalty!\n");
 		System.out.println("Press Enter to start...");
 		sc.nextLine();
-		System.out.println("|--------|");
+		System.out.println("|----|----|\n");
 		Game g = new Game();
 		int ending = g.play();
 		if(ending == 3)

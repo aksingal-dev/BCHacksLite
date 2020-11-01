@@ -69,7 +69,7 @@ public class StoryNode {
 		}
 		if(s.equals("b"))
 		{
-			b.setCandy(candiesGiven[2]);
+			b.setCandy(candiesGiven[1]);
 			return b;
 		}
 		if(s.equals("c"))
