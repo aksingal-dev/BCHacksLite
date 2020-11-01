@@ -13,6 +13,7 @@ public class StoryNode {
 	private String optC;
 	private String optD;
 	
+	private Candy toGive = null;
 	private Candy[] candiesGiven = {null, null, null, null};
 	private int ending = -1;
 	
@@ -21,7 +22,13 @@ public class StoryNode {
 		if(this.output().contains("startled by a mummy"))
 			this.setOutput(this.output() + p.dropCandy());
 		System.out.println("\n----------\n");
-		System.out.println(this.output());
+		System.out.println(this.output()+"\n");
+		if(toGive != null)
+		{
+			System.out.println("\n");
+			p.addCandy(toGive);
+			System.out.println("\n");
+		}
 		if(ending != -1)
 		{
 			return new StoryNode(Integer.toString(ending));
@@ -29,7 +36,7 @@ public class StoryNode {
 		if(next != null)
 		{
 			if(candiesGiven[0] != null)
-				p.addCandy(candiesGiven[0]);
+				next.setCandy(candiesGiven[0]);
 			return next;
 		}
 		String s = "";
@@ -57,22 +64,22 @@ public class StoryNode {
 		
 		if(s.equals("a"))
 		{
-			p.addCandy(candiesGiven[0]);
+			a.setCandy(candiesGiven[0]);
 			return a;
 		}
 		if(s.equals("b"))
 		{
-			p.addCandy(candiesGiven[1]);
+			b.setCandy(candiesGiven[2]);
 			return b;
 		}
 		if(s.equals("c"))
 		{
-			p.addCandy(candiesGiven[2]);
+			c.setCandy(candiesGiven[2]);
 			return c;
 		}
 		if(s.equals("d"))
 		{
-			p.addCandy(candiesGiven[3]);
+			d.setCandy(candiesGiven[3]);
 			return d;
 		}
 		
@@ -97,6 +104,7 @@ public class StoryNode {
 		this.d = null;
 	}
 	
+	public void setCandy(Candy c) { toGive = c; }
 	public void setOutput(String out) { output = out; }
 	public void setCandy(Candy c, int n) { candiesGiven[n] = c; }
 	public void setNext(StoryNode n) { next = n; }
