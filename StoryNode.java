@@ -30,6 +30,7 @@ public class StoryNode implements ActionListener
    Font century = new Font("Century", Font.PLAIN, 12);
    
    String p1 = ("<html><div style='text-align: center;'>You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. It’s finally October 31st, Halloween! <br/> You’ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. It’s 5pm, so it’s time to pick out your costume and head out! <br/> But, what to be? You’ve managed to narrow it down to four options, but they’re all so good! What should you be?</div><html>");
+   String p2 = ("<html><div-style='text-align: center;'>Well, this is it then! You’ve decided that you’re going to be a __________. <br/> You check your costume out one more time in the mirror to make sure that you’re looking like the best damn __________ on the block.</div><html");
    String costume1 = "a pumpkin";
    String costume2 = "a dinosaur";
    String costume3 = "a blue Trayola crayon";
@@ -63,7 +64,15 @@ public class StoryNode implements ActionListener
       next.setBackground(Color.black);
       next.setForeground(Color.green);
       next.setFont(mono);
-      next.setVisible(false); 
+      
+      if (next.getText() == p1)
+      {
+         next.setVisible(false);
+      }
+      else
+      {
+         next.setVisible(true);
+      } 
       
       //Create an "option 1" button
       option1 = new JButton("option 1");
@@ -118,7 +127,13 @@ public class StoryNode implements ActionListener
       
       if (eventName.equals(next) || eventName.equals(option1) || eventName.equals(option2) || eventName.equals(option3) || eventName.equals(option4))
       {
-         
+         if (story.equals(p1))
+         {
+            story.setText(p2);
+         }
+         else 
+         {
+         }
       }
          
    }
