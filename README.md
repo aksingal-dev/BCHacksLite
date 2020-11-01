@@ -1,5 +1,5 @@
 # BCHacksLite
-Please use either the Jar file with command line or the main method in ChooseYourOwnCandy.java with an IDE to start the game. 
+Please use the main method in ChooseYourOwnCandy.java with an IDE to start the game.
 
 We hope you like it!
 
