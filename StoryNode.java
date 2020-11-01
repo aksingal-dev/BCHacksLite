@@ -45,7 +45,7 @@ public class StoryNode {
 					System.out.println("d: " + optD);
 			}
 			
-			s = sc.next();
+			s = sc.nextLine().toLowerCase();
 			
 			valid = !((!s.equals("a") && !s.equals("b") && !s.equals("c") && !s.equals("d")) ||
 					  (s.equals("c") && c == null) ||
