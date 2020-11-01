@@ -65,39 +65,35 @@ public class StoryTree {
 		
 		StoryNode n6 = new StoryNode("The witch wishes you a spooky evening, before mist appears from nowhere to obscure\n"
 								   + "her body. By the time the mist clears, she has disappeared, and the door creaks shut.\n"
-								   + "Maybe you ought to move on to the next house...\n");
-		n3.setNext(n6);
-		n4.setNext(n6);
-		n5.setNext(n6);
-		
-		StoryNode n7 = new StoryNode("As you walk up to the next house, you notice a massive number of pumpkins;\n"
+								   + "Maybe you ought to move on to the next house...\n\n"
+								   + "As you walk up to the next house, you notice a massive number of pumpkins;\n"
 								   + "easily around 15 of them, each looking like they'd been roughly carved by claws.\n"
 								   + "Fortunately, you couldn't see any feral beasts around, so you pushed onwards.\n"
 								   + "After ringing the doorbell and yelling the tried and true, \"Trick or treat\",\n"
 								   + "a man - no, this is no man - answers the door covered in fur. He must be some\n"
 								   + "sort of animal, but... wearing ripped jeans and flannel?\n\n"
 								   + "You start to turn, meaning to run away, but you hear it speak in English and\n"
-								   + "turn back around.\n\n");
-		n6.setNext(n7);
-		
-		StoryNode n8 = new StoryNode("\"Happy Halloween!\" he says. \"I hope you're having a safe and fun night.\"\n\n"
+								   + "turn back around.\n\n"
+								   + "\"Happy Halloween!\" he says. \"I hope you're having a safe and fun night.\"\n\n"
 								   + "The werewolf (you're SURE that's what he is) seems happy to see you, and \n"
 								   + "not in an \"I'm-going-to-eat-you\" sort of way. You calm down and smile\n"
 								   + "sheepishly at him as he continues:\n"
 								   + "Well, what kind of candy would you like?");
-		n7.setNext(n8);
-		n8.setA(null, "Gummy worms!");
-		n8.setB(null, "Rockets!");
-		n8.setC(null, "P and Q's!");
-		n8.setCandy(new GummyWorms(), 0);
-		n8.setCandy(new Rockets(), 1);
-		n8.setCandy(new CandyCorn(), 2);
+		n3.setNext(n6);
+		n4.setNext(n6);
+		n5.setNext(n6);
+		n6.setA(null, "Gummy worms!");
+		n6.setB(null, "Rockets!");
+		n6.setC(null, "P and Q's!");
+		n6.setCandy(new GummyWorms(), 0);
+		n6.setCandy(new Rockets(), 1);
+		n6.setCandy(new CandyCorn(), 2);
 		
 		StoryNode n9 = new StoryNode("The werewolf laughs heartily, startling you. \"Those are my favorites too!\"\n"
 								   + "He tosses the candy into your pillowcase, and waves at you as you walk away.\n");
-		n8.setA(n9);
-		n8.setB(n9);
-		n8.setC(n9);
+		n6.setA(n9);
+		n6.setB(n9);
+		n6.setC(n9);
 		
 		// ASPHODEL MINTS
 		StoryNode n10 = new StoryNode("The next house has no decorations outside - no pumpkins, not even a\n"
@@ -113,12 +109,13 @@ public class StoryTree {
 									+ "Somewhat shaken, you turn around and nearly sprint back down the path,\n"
 									+ "eager to get back on the road.\n\n");
 		n9.setNext(n10);
-		n10.setCandy(new AsphodelMints(), 0);
+		n10.setCandy(new AsphodelMints());
 		
 		StoryNode n11 = new StoryNode("However, just as you get to the road, your stomach rumbles; the night\n"
 									+ "has already been more exhausting than expected. You wanted to save\n"
 									+ "your candy for when you get home... but maybe you could eat those mints?\n"
 									+ "You don't think your mom would be happy to see you with them anyway...\n\n");
+		n10.setNext(n11);
 		n11.setA(null, "Eat the mints... what's the worst that could happen?");
 		n11.setB(null, "Deal with it for a while.");
 		
