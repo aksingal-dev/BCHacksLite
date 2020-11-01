@@ -1,4 +1,4 @@
-import java.io.IOException;
+
 import java.util.*;
 
 public class Game {
@@ -8,7 +8,7 @@ public class Game {
 	public Game() {
 		// start game; easier to do this part here than put this as part of initializeTree().
 		
-		System.out.println("You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. It�s finally October 31st, Halloween! You�ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. It�s 5pm, so it�s time to pick out your costume and head out! But, what to be? You�ve managed to narrow it down to four options, but they�re all so good! What should you be?");
+		System.out.println("You yawn as you stretch, and having woken up from your nap just as your alarm starts to go off. It’s finally October 31st, Halloween! You’ve been waiting for this day for, well, since last Halloween! This year is sure to be the best. It’s 5pm, so it’s time to pick out your costume and head out! But, what to be? You’ve managed to narrow it down to four options, but they’re all so good! What should you be?");
 		System.out.println("a: A pumpkin\nb: A dinosaur\nc: A blue Flayola crayon\nd: A banana");
 		Scanner sc = new Scanner(System.in);
 		boolean valid;
@@ -30,23 +30,14 @@ public class Game {
 		if(s.equals("d"))
 			p = new Player("banana");
 		
-		initializeTree();
-	}
-	
-	void initializeTree() {
-		// Do this once Ellen is done with the story!
-		
-		tree = new StoryTree(new StoryNode("Well, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
+		System.out.println("Well, this is it, then! You've decided that you're going to be a " + p.costume + ".\n"
 				                         + "You check your costume out one more time in the mirror to make sure\n"
-										 + "that you're looking like the best damn " + p.costume + " on the block."));
-
-		StoryNode n = tree.getRoot();
-		n.setA(new StoryNode("You walk up to the first house on the block. It�s... kind of tacky looking. \n"
-						   + "For some reason it has Christmas lights up, but it also has a carved pumpkin on the \n"
-						   + "porch, as well as some fake cobwebs. At least, you think they�re fake�"),"");
+										 + "that you're looking like the best damn " + p.costume + " on the block.");
+		
+		tree = new StoryTree(p);
 	}
 	
-	public int play() throws IOException
+	public int play()
 	{
 		/* Return integer based on ending:
 		 * 0 for "True" ending;
