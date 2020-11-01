@@ -86,5 +86,14 @@ public class Player {
 			this.setStr(getStr()+ stats[2]);
 			
 		}
+		
+		public void eatCandy(Candy c) {
+			if(c.isEdible()) {
+				modifyStats(c.getEffect());
+			}
+			else {
+				
+			}
+		}
 	
 }
